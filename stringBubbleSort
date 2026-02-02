@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  string c;
+  cout << "Enter the string to sort" << endl;
+  cin >> c;
+  for (int a = 0; a < c.length(); a++) {
+    for (int b = 0; b < c.length() - a - 1; b++) {
+      if (c[b] > c[b + 1]) {
+        char temp = c[b];
+        c[b] = c[b + 1];
+        c[b + 1] = temp;
+      }
+    }
+  }
+  cout << c;
+  return 0;
+}
